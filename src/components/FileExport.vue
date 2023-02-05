@@ -36,7 +36,7 @@ const exportFile = () => {
   }
 
   let a = document.createElement("a");
-  a.href = "data:attachment/csv," + fileContent;
+  a.href = "data:attachment/csv," + escape(fileContent);
   a.download = "export.csv";
   a.click();
 
