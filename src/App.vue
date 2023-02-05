@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CsvEditor />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CsvEditor from "./components/CsvEditor.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CsvEditor,
+  },
+};
 </script>
 
 <style>
+:root {
+  --app-green: #10bd6a;
+  --ui-blue: #0c9aa4;
+  --ui-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --ui-blue-hover: #107e86;
+  background: var(--app-green);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  max-width: 100vw;
 }
 </style>
